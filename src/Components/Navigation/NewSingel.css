@@ -1,0 +1,55 @@
+.container{
+ 
+
+    flex: 1 270px;
+    
+   
+  }
+  .card{
+    
+   
+    min-height: 95%;
+    background-color: white;
+    border: 1px solid #fff;
+    -webkit-box-shadow: 7px 10px 13px -5px rgba(0,0,0,0.47); 
+    box-shadow: 7px 10px 13px -5px rgba(0,0,0,0.47);
+    margin: 10px;
+  
+   
+  }
+ 
+  .card-title{
+  padding-left: 3%;
+    z-index: 1;
+    color: rgb(199, 172, 22);
+    
+  }
+  .card-image{
+    z-index: -1;
+  }
+  img{
+   
+    height: 100%;
+    width: 100%;
+    
+  }
+  .card-content{
+    padding: 5%;
+   
+  
+  }
+  
+  .card-action{
+    
+    
+    position: relative;
+    bottom: 0%;
+    padding: 3%;
+    
+  }
+  a{
+    color: rgb(199, 172, 22);
+    text-decoration: none;
+  }
+  
+  

@@ -1,25 +1,67 @@
-import logo from './logo.svg';
+import React, { Component } from 'react'
+import MainNews from './Pages/MainNews';
+import Technology from './Pages/Technology';
+import Booking from './Pages/Booking';
 import './App.css';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import MainNavigation from './Components/Navigation/MainNavigation';
+import SideDrower from './Components/Navigation/SideDrower/SideDrower';
+import BeackDrop from './Components/Navigation/BeackDrop/BeackDrop';
+import RightSideNews from './SideNews/RightSideNews';
+import { HashRouter } from "react-router-dom"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component{
+  state = {
+    sideDrowerOpen: false
+  };
+  
+  drowerToggleClickHendler =() =>{
+    this.setState((prevState)=>{
+      return{sideDrowerOpen: !prevState.sideDrowerOpen};
+    });
+  };
+
+  beackDropClickHandler = () =>{
+    this.setState({sideDrowerOpen: false})
+  };
+
+  
+  render(){
+    let beackDrop;
+
+    if(this.state.sideDrowerOpen){
+      beackDrop =  <BeackDrop click = {this.beackDropClickHandler} />
+    }
+    return(
+     
+      <div style= {{height: '100%'}}>
+      
+     
+      <HashRouter>
+      <React.Fragment>
+      <MainNavigation drowerClickHandler = {this.drowerToggleClickHendler}/>
+      {/* <RightSideNews /> */}
+      <main className ='main-content'>
+        <Switch>
+          <Redirect from ='/' to = '/mainNews' exact />
+          <Route path = '/mainNews' component = {MainNews}/>
+          <Route path = '/technology' component = {Technology}/>
+          <Route path = '/booking' component = {Booking}/>
+        </Switch>
+      </main>
+      <SideDrower  show = {this.state.sideDrowerOpen}/>
+      {beackDrop}
+      </React.Fragment>
+      </HashRouter>
+     
+     
+      </div>
+    
+    );
+  
+  }
+ 
 }
 
 export default App;

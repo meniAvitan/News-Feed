@@ -1,0 +1,40 @@
+.side-drower{
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.938);
+    box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    max-width: 300px;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-out;
+    
+}
+.side-drower.open{
+    transform: translateX(0);
+}
+
+.side-drower ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    
+}
+.side-drower li{
+    margin: 0.5rem 0;
+}
+.side-drower a{
+    color: rgb(80, 80, 170);
+    text-decoration: none;
+    font-size: 1.5rem;
+
+}
+.side-drower a:hover,
+.side-drower a:active,
+.side-drower a.active{
+    color: salmon;
+}
+
