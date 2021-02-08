@@ -8,7 +8,12 @@ import MainNavigation from './Components/Navigation/MainNavigation';
 import SideDrower from './Components/Navigation/SideDrower/SideDrower';
 import BeackDrop from './Components/Navigation/BeackDrop/BeackDrop';
 import RightSideNews from './SideNews/RightSideNews';
-import { HashRouter } from "react-router-dom"
+import { HashRouter } from "react-router-dom";
+import ScrollToTop from 'react-scroll-up';
+import scrollUp from './Components/Navigation/scroll_up.png';
+
+
+
 
 
 class App extends Component{
@@ -34,6 +39,7 @@ class App extends Component{
       beackDrop =  <BeackDrop click = {this.beackDropClickHandler} />
     }
     return(
+      
      
       <div style= {{height: '100%'}}>
       
@@ -41,6 +47,12 @@ class App extends Component{
       <HashRouter>
       <React.Fragment>
       <MainNavigation drowerClickHandler = {this.drowerToggleClickHendler}/>
+      <div className ="scroll-up">
+        <ScrollToTop showUnder={160}>
+          <span> <img alt= 'scroll' src ={scrollUp}/> </span>
+        </ScrollToTop>
+      </div>
+     
       {/* <RightSideNews /> */}
       <main className ='main-content'>
         <Switch>

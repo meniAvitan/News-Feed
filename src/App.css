@@ -16,6 +16,18 @@
   padding-top: 15px;
   text-align: center;
 }
+.scroll-up{
+  
+    position: 'fixed';
+    bottom: 50px;
+    right: 0px;
+    cursor: 'pointer';
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    
+  
+}
   .row{
     /* display: grid;
     grid-template-columns: repeat(6,1fr);

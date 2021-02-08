@@ -9,24 +9,25 @@ const SideDrower = props =>{
         drowerClasses = "side-drower open";   
     }
     return(
-        
-    <nav className = {drowerClasses} >
-        <ul>
-                <li>
-                    <NavLink to="/mainNews">Sport</NavLink>
-                </li>
-                <hr/>
-                <li>
-                    <NavLink to="/technology">Technology</NavLink>
-                </li>
-                <hr/>
-                <li>
-                    <NavLink to="/booking">Booking</NavLink>
-                </li>
-                <hr/>
+     <div className="main-side">  
+        <nav className = {drowerClasses} >
+            <ul>
+                    <li>
+                        <NavLink to="/mainNews">Sport</NavLink>
+                    </li>
+                  
+                    <li>
+                        <NavLink to="/technology">Technology</NavLink>
+                    </li>
+                  
+                    <li>
+                        <NavLink to="/booking">Booking</NavLink>
+                    </li>
+                  
 
-            </ul>
-    </nav>
+                </ul>
+        </nav>
+    </div> 
     );
 };
     
