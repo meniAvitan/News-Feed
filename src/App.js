@@ -1,7 +1,11 @@
-import React, { Component } from 'react'
-import MainNews from './Pages/MainNews';
+import React, { Component } from 'react';
+import Bussines from './Pages/Bussines';
+import Entertainment from './Pages/Entertainment';
+import Health from './Pages/Health';
+import Sports from './Pages/Sport';
+import Science from './Pages/Science';
 import Technology from './Pages/Technology';
-import Booking from './Pages/Booking';
+import World from './Pages/World';
 import './App.css';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import MainNavigation from './Components/Navigation/MainNavigation';
@@ -11,6 +15,7 @@ import RightSideNews from './SideNews/RightSideNews';
 import { HashRouter } from "react-router-dom";
 import ScrollToTop from 'react-scroll-up';
 import scrollUp from './Components/Navigation/scroll_up.png';
+
 
 
 
@@ -31,6 +36,12 @@ class App extends Component{
     this.setState({sideDrowerOpen: false})
   };
 
+  componentDidMount() {
+    this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
   
   render(){
     let beackDrop;
@@ -53,14 +64,20 @@ class App extends Component{
         </ScrollToTop>
       </div>
      
-      {/* <RightSideNews /> */}
+      
       <main className ='main-content'>
+      <RightSideNews />
         <Switch>
-          <Redirect from ='/' to = '/mainNews' exact />
-          <Route path = '/mainNews' component = {MainNews}/>
+          <Redirect from ='/' to = '/bussines' exact />
+          <Route path = '/bussines' component = {Bussines}/>
+          <Route path = '/entertainment' component = {Entertainment}/>
+          <Route path = '/health' component = {Health}/>
+          <Route path = '/sports' component = {Sports}/>
+          <Route path = '/science' component = {Science}/>
           <Route path = '/technology' component = {Technology}/>
-          <Route path = '/booking' component = {Booking}/>
+          <Route path = '/world' component = {World}/>
         </Switch>
+        <div className= "v1"></div>
       </main>
       <SideDrower  show = {this.state.sideDrowerOpen}/>
       {beackDrop}

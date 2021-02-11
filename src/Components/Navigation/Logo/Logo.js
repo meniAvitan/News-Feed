@@ -9,7 +9,7 @@ const Logo =()=>{
       <div className ='ma4 mt0'>
         <Tilt className="Tilt" >
         <div className="Tilt-inner">
-          <img style = {{}} alt= 'logo' src ={news}/> 
+          <img alt= 'logo' src ={news}/> 
         </div>
         </Tilt>
 

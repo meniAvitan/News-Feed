@@ -1,16 +1,18 @@
 import React from 'react';
+import './SingelSide.css';
 
 const SingelSide = ({item})=>(
-    <div>
-        <div className="divider"></div>
-        <a href={item.url} target="_blank">
-            <h5>{item.source.name}</h5>
-            <p>{item.title}</p>
-        </a>
-        <div className="section">
-          
-        </div>
-    </div>
+    <div className ="side-card">
+        
+            
+    <img className="side-img" src={item.image} alt={item.title}/>
+
+    <p className ="side-name" >{item.title}</p>
+    {/* <p className="card-title">{item.title}</p> */}
+    <a className='side-full-article' href={item.url}  rel="noreferrer" target="_blank">FULL ARTICLE</a>
+
+    
+</div>
 );
 
 export default SingelSide;

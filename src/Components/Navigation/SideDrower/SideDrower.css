@@ -12,10 +12,15 @@
     transition: transform 0.5s ease-out;
     
 }
-li{
+.side-li{
     border-bottom: 1px solid rgb(80, 80, 170);
     padding-bottom: 10px;
     
+}
+.side-li:hover,
+.side-li:active,
+.side-li.active{
+    border-bottom: 1px solid rgb(199, 172, 22);
 }
 .main-side{
     background-color:  rgba(80, 80, 170, 0.644);
@@ -44,6 +49,6 @@ li{
 .side-drower a:hover,
 .side-drower a:active,
 .side-drower a.active{
-    color: salmon;
+    color: rgb(199, 172, 22);
 }
 

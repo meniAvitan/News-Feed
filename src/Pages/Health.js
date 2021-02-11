@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
-import SingelSide from './SingelSide';
-import '../App.css';
+import NewSingel from '../Components/Navigation/NewSingel';
 import Error from '../Components/Navigation/Error';
+import '../App.css';
 
-class RightSideNews extends Component{
-   
+class Health extends Component{
     constructor(props){
         super(props);
         this.state = {
-            sidenews: [],
+            news: [],
             error: false
         };
     }
 
     componentDidMount(){
-       const url = 'https://gnews.io/api/v4/search?q=example&token=9d45c178d3736544cca1dce8d70b2835';
-
+        // const url = 'http://newsapi.org/v2/top-headlines?sources=google-news-is&apiKey=416ec7089a83456189a882e8a89b739f';
+      
+        const url = 'https://gnews.io/api/v4/top-headlines?q=health&lang=en&token=30252127d965277ab27a0f43c8067549';
+        // const url = 'https://gnews.io/api/v4/top-headlines?q=world&lang=he&token=30252127d965277ab27a0f43c8067549';
+      
         fetch(url)
         .then((response) =>{
             return response.json();
         })
         .then((data) =>{
             this.setState({
-                sidenews: data.articles
+                news: data.articles
             })
         })
         .catch((error)=> { 
@@ -33,17 +35,16 @@ class RightSideNews extends Component{
     }
     renderItems() {
         if(!this.state.error){
-            return this.state.sidenews.map((item)=>(
-                <SingelSide key = {item.url} item = {item}/>
+            return this.state.news.map((item)=>(
+                <NewSingel key = {item.url} item = {item}/>
             ));
         }else{
-            <Error />
+            return <Error />
         }
-       
     }
     render(){
         return(
-            <div className = "row-side" >
+            <div className ="row">
                 
                     {this.renderItems()}
                 
@@ -51,4 +52,4 @@ class RightSideNews extends Component{
         );
     }
 }
-export default RightSideNews;
+export default Health;

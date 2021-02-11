@@ -14,9 +14,10 @@
 
 }
 .main-navigation-logo h1{
-    margin: 0;
-    font-size: 1.5rem;
-    color: rgb(80, 80, 170);
+    margin-left: 0.5rem;
+    font-size: 2rem;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 
 }
 .spacer{
@@ -36,14 +37,26 @@
     margin: 0 1rem;
 }
 
+.main-li{
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    
+}
+.main-li:hover,
+.main-li:active,
+.main-li.active{
+    border-bottom: 1px solid rgb(199, 172, 22);
+}
+
 .main-navigation-item a{
     text-decoration: none;
-    color: rgb(80, 80, 170);
+    color: white;
 }
 .main-navigation-item a:hover,
 .main-navigation-item a:active,
 .main-navigation-item a.active{
-    color: salmon;
+    color: rgb(199, 172, 22);
+
 }
 
 @media (max-width: 768px){
@@ -58,6 +71,11 @@
       margin: 2.5rem;
       width: 40px;
      
+    }
+    .main-navigation-logo h1{
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        text-align: center;
     }
 }
 

@@ -13,10 +13,10 @@ class MainNews extends Component{
     }
 
     componentDidMount(){
-        // const url = 'http://newsapi.org/v2/everything?q=tesla&from=2021-01-07&sortBy=publishedAt&apiKey=416ec7089a83456189a882e8a89b739f';
+        // const url = 'http://newsapi.org/v2/top-headlines?sources=google-news-is&apiKey=416ec7089a83456189a882e8a89b739f';
       
-        //const url = 'https://gnews.io/api/v4/search?q=technology&token=9d45c178d3736544cca1dce8d70b2835';
-         const url = 'https://gnews.io/api/v4/top-headlines?q=world&lang=he&token=30252127d965277ab27a0f43c8067549';
+        const url = 'https://gnews.io/api/v4/top-headlines?q=sports&lang=en&token=30252127d965277ab27a0f43c8067549';
+        // const url = 'https://gnews.io/api/v4/top-headlines?q=world&lang=he&token=30252127d965277ab27a0f43c8067549';
       
         fetch(url)
         .then((response) =>{

@@ -1,5 +1,29 @@
 .main-content{
-  margin: 4rem 2.5rem;
+ 
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: 300px 100px;
+  margin-top: 10%;
+ 
+}
+.row{
+  grid-column: 1/ span 8;
+  
+}
+.row-side{
+ 
+  grid-column: 10/ span 3;
+  background-color: rgba(128, 128, 128, 0.432);
+  margin: 5%;
+  height: auto;
+ 
+  
+}
+.v1{
+  background-color: gray;
+  height: 100%;
+  width: 5%;
 }
 
 .App {
@@ -22,55 +46,20 @@
     bottom: 50px;
     right: 0px;
     cursor: 'pointer';
-    transition-duration: 0.1s;
-    transition-timing-function: linear;
-    transition-delay: 0s;
+    transition-duration: 1s;
+    transition-timing-function:step-end;
+    transition-delay: 3s;
     
   
 }
-  .row{
-    /* display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-template-rows: minmax(300px, auto);
-    
-     gap: 1%; */
-     display: flex;
-     flex-wrap: wrap;
-     flex-direction: row;
-   
-  
-} 
-.content{
-  /* grid-column: 2/ span 4;
-  display: flex;
-   flex-wrap: wrap;
-   flex-direction: row; */
  
-}
+
 hr{
   bottom: 3%;
 }
-/* @media (max-width: 768px) {
-  .row {
-    flex:  60%;
-  }
-} */
 
-.sideNews{
-  display: none;
-}
-/*
-.navbar-fixed{
-  height: 110px;
-  opacity: 0.6;
- 
-}
-nav{
-  height: 110px;
-}
-.r{
-  flex-grow: 1;
-} */
+
+
 
 .App-header {
  
@@ -81,6 +70,28 @@ nav{
   justify-content: center;
   font-size: calc(10px + 2vmin);
  
+}
+@media (min-width: 769px){
+  .main-content{
+    margin: 5rem 0.5rem;
+  } 
+}
+
+@media (max-width: 768px){
+  .main-content{
+    margin-top: 5rem ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  } 
+  /* .row{ 
+     width: 100%; 
+}  */
+.row-side{
+  display: none;
+}
+
 }
 
 

@@ -1,55 +1,102 @@
-.container{
- 
 
-    flex: 1 270px;
-    
-   
-  }
   .card{
-    
-   
-    min-height: 95%;
+    grid-column: 2 / span 6;
+    margin: 5%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3,auto);
     background-color: white;
-    border: 1px solid #fff;
-    -webkit-box-shadow: 7px 10px 13px -5px rgba(0,0,0,0.47); 
-    box-shadow: 7px 10px 13px -5px rgba(0,0,0,0.47);
-    margin: 10px;
-  
    
+    -webkit-box-shadow: 7px 10px 13px -5px rgba(0,0,0,0.47); 
+    box-shadow: 7px 10px 13px -5px rgba(0,0,0,0.47); 
+    padding: 20px;
+
   }
  
-  .card-title{
-  padding-left: 3%;
-    z-index: 1;
-    color: rgb(199, 172, 22);
-    
-  }
-  .card-image{
-    z-index: -1;
-  }
-  img{
-   
+  .card-img{
+    grid-column: 1/ span 3;
+    grid-row: 1 / span 3;
     height: 100%;
     width: 100%;
-    
   }
-  .card-content{
-    padding: 5%;
-   
+ img{
+  height: 100%;
+  width: 100%;
+ }
+ .card-name{
+  grid-column: 4 / span 3;
+  grid-row: 1/ span 1;
+  margin: 0;
+  padding-left: 10%;
+  margin-top: 15px;
+  color: rgb(199, 172, 22);
+ }
   
-  }
-  
-  .card-action{
-    
-    
-    position: relative;
-    bottom: 0%;
-    padding: 3%;
-    
-  }
   a{
     color: rgb(199, 172, 22);
     text-decoration: none;
   }
+  .card-title{
+      font-family: Poppins,sans-serif;
+      grid-column: 4 / span 5;
+      grid-row: 2/ span 1;
+      padding-left: 10%;
+      font-size: 120%;
+      line-height: 130%;
+  }
+  .full-article{
+    grid-column: 7 / span 2;
+    grid-row: 3/ span 1;
+    text-align: center;
+    margin-top: 15px;
+    padding: 5px;
+    border: 1px solid rgb(199, 172, 22);
+
+  }
+  .full-article:hover{
+    color: white;
+    background-color: rgb(199, 172, 22);
+  }
   
+  @media (max-width: 950px){
+    .card{
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      background-color: white;
+      border: 1px solid #fff;
+      -webkit-box-shadow: 7px 10px 13px -5px rgba(0,0,0,0.47); 
+      box-shadow: 7px 7px 10px 5px rgba(0,0,0,0.47);
+      margin: 15px;
+     
+    
+    }
+    .card-img{
+     
+      height: 100%;
+      width: 100%;
+    }
+    .card-name{
+      padding-left: 3%;
+        z-index: 1;
+        color: rgb(199, 172, 22);
+        
+      } 
+      .card-title{
+        padding: 5%;
+      }
+      .full-article{ 
+        margin-top: 10px; 
+        margin-left: 55%;  
+        text-align: center;
+        padding: 3%;
+        border: 1px solid rgb(199, 172, 22);
+        
+      }
+      .full-article:hover{
+        color: white;
+        background-color: rgb(199, 172, 22);
+      }
+  }
   

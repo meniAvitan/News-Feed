@@ -17,20 +17,34 @@ const MainNavigation = props => (
         </div>
        
         <div className="main-navigation-logo">   
-            <h1>News</h1>
+            <h1>ALL NEWS</h1>
         </div>
         <div className = "spacer" />
         <div className="main-navigation-item">
             <ul>
-                <li>
-                    <NavLink to="/mainNews">Sport</NavLink>
+                <li className = "main-li">
+                    <NavLink to="/bussines">Bussines</NavLink>
+                    
                 </li>
-                <li>
+                <li className = "main-li">
                     <NavLink to="/technology">Technology</NavLink>
                 </li>
-                <li>
-                    <NavLink to="/booking">Booking</NavLink>
+                <li className = "main-li">
+                    <NavLink to="/sports">Sport</NavLink>
                 </li>
+                <li className = "main-li">
+                    <NavLink to="/world">World</NavLink>
+                    
+                </li>
+                <li className = "main-li">
+                    <NavLink to="/health">Health</NavLink>
+                </li>
+                {/* <li className = "main-li">
+                    <NavLink to="/science">Science</NavLink>
+                </li>
+                <li className = "main-li">
+                    <NavLink to="/entertainment">Entertainment</NavLink>
+                </li> */}
 
             </ul>
         </div>
