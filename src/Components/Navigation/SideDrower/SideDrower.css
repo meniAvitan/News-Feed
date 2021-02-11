@@ -10,6 +10,7 @@
     z-index: 200;
     transform: translateX(-100%);
     transition: transform 0.5s ease-out;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     
 }
 .side-li{
@@ -51,4 +52,5 @@
 .side-drower a.active{
     color: rgb(199, 172, 22);
 }
+
 

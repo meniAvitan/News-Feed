@@ -5,4 +5,12 @@
     max-width: 55px;
     margin-top: 10px;
     margin-right: 10px;
+    
+}
+.Tilt-inner{
+    transition: 1s ease;
+    cursor: pointer;
+}
+.Tilt-inner:hover{
+    transform: rotate(360deg);
 }

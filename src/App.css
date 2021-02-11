@@ -9,6 +9,7 @@
 }
 .row{
   grid-column: 1/ span 8;
+  margin: 0;
   
 }
 .row-side{
@@ -16,7 +17,7 @@
   grid-column: 10/ span 3;
   background-color: rgba(128, 128, 128, 0.432);
   margin: 5%;
-  height: auto;
+  
  
   
 }

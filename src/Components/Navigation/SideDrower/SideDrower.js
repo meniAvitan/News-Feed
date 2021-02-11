@@ -29,14 +29,16 @@ const SideDrower = props =>{
                 <li className="side-li">
                     <NavLink to="/health">Health</NavLink>
                 </li>
-                <li>
+                <li className="side-li">
                     <NavLink to="/science">Science</NavLink>
                 </li>
                 <li className="side-li">
                     <NavLink to="/entertainment">Entertainment</NavLink>
                 </li>
-
+                
+               
             </ul>
+        
         </nav>
     </div> 
     );

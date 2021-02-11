@@ -12,6 +12,7 @@ import MainNavigation from './Components/Navigation/MainNavigation';
 import SideDrower from './Components/Navigation/SideDrower/SideDrower';
 import BeackDrop from './Components/Navigation/BeackDrop/BeackDrop';
 import RightSideNews from './SideNews/RightSideNews';
+import About from './Components/About/About';
 import { HashRouter } from "react-router-dom";
 import ScrollToTop from 'react-scroll-up';
 import scrollUp from './Components/Navigation/scroll_up.png';
@@ -52,7 +53,7 @@ class App extends Component{
     return(
       
      
-      <div style= {{height: '100%'}}>
+      <div style= {{height: '100%' }}>
       
      
       <HashRouter>
@@ -78,9 +79,11 @@ class App extends Component{
           <Route path = '/world' component = {World}/>
         </Switch>
         <div className= "v1"></div>
+        <About />
       </main>
       <SideDrower  show = {this.state.sideDrowerOpen}/>
       {beackDrop}
+     
       </React.Fragment>
       </HashRouter>
      
