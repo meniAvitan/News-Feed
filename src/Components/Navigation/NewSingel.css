@@ -38,7 +38,6 @@
     text-decoration: none;
   }
   .card-title{
-      font-family: Poppins,sans-serif;
       grid-column: 4 / span 5;
       grid-row: 2/ span 1;
       padding-left: 10%;
@@ -80,12 +79,13 @@
     }
     .card-name{
       padding-left: 3%;
-        z-index: 1;
+        
         color: rgb(199, 172, 22);
         
       } 
       .card-title{
         padding: 5%;
+       
       }
       .full-article{ 
         margin-top: 10px; 

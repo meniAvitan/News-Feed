@@ -14,9 +14,10 @@ class Entertainment extends Component{
 
     componentDidMount(){
         // const url = 'http://newsapi.org/v2/top-headlines?sources=google-news-is&apiKey=416ec7089a83456189a882e8a89b739f';
-      
-        const url = 'https://gnews.io/api/v4/top-headlines?q=entertainment&lang=en&token=30252127d965277ab27a0f43c8067549';
-        // const url = 'https://gnews.io/api/v4/top-headlines?q=world&lang=he&token=30252127d965277ab27a0f43c8067549';
+       //m054849...
+       const url = 'https://gnews.io/api/v4/top-headlines?q=entertainment&lang=en&token=9060e09ee5db34d42bbd2f0479cd797a';
+       //meni.av053
+       //const url = 'https://gnews.io/api/v4/top-headlines?q=entertainment&lang=en&token=30252127d965277ab27a0f43c8067549'; // const url = 'https://gnews.io/api/v4/top-headlines?q=world&lang=he&token=30252127d965277ab27a0f43c8067549';
       
         fetch(url)
         .then((response) =>{

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+//PAGES
 import Bussines from './Pages/Bussines';
 import Entertainment from './Pages/Entertainment';
 import Health from './Pages/Health';
@@ -7,13 +8,15 @@ import Science from './Pages/Science';
 import Technology from './Pages/Technology';
 import World from './Pages/World';
 import './App.css';
+//NAVIGATION
+import { HashRouter } from "react-router-dom";
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import MainNavigation from './Components/Navigation/MainNavigation';
 import SideDrower from './Components/Navigation/SideDrower/SideDrower';
 import BeackDrop from './Components/Navigation/BeackDrop/BeackDrop';
 import RightSideNews from './SideNews/RightSideNews';
+
 import About from './Components/About/About';
-import { HashRouter } from "react-router-dom";
 import ScrollToTop from 'react-scroll-up';
 import scrollUp from './Components/Navigation/scroll_up.png';
 
@@ -37,12 +40,12 @@ class App extends Component{
     this.setState({sideDrowerOpen: false})
   };
 
-  componentDidMount() {
-    this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000);
-  }
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
+  // componentDidMount() {
+  //   this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000);
+  // }
+  // componentWillUnmount() {
+  //   clearInterval(this.interval);
+  // }
   
   render(){
     let beackDrop;
